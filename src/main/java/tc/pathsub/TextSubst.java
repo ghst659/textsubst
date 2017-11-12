@@ -47,13 +47,12 @@ public class TextSubst {
             int currentStart = 0;
             for (Delta d: deltas) {
                 assert d.beginIndex >= currentStart;
-                if (d.endIndex <= L) {
-                    buf.append(inputText.substring(currentStart, d.beginIndex));
-                    buf.append(d.newText);
-                    currentStart = d.endIndex;
-                } else {
+                if (d.endIndex > L) {
                     break;
                 }
+                buf.append(inputText.substring(currentStart, d.beginIndex));
+                buf.append(d.newText);
+                currentStart = d.endIndex;
             }
             if (currentStart < L) {
                 buf.append(inputText.substring(currentStart, L));
