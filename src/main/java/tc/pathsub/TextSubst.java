@@ -3,8 +3,8 @@ package tc.pathsub;
 import java.util.*;
 
 public class TextSubst {
-    private LinkedHashMap<String, String> tbl = new LinkedHashMap<>();
-    public TextSubst(LinkedHashMap<String,String> substitutions) {
+    private Map<String, String> tbl = new LinkedHashMap<>();
+    public TextSubst(Map<String,String> substitutions) {
         tbl.putAll(substitutions);
     }
     private static class Delta {

@@ -14,6 +14,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <v.jvm>9</v.jvm>
     <v.mavencompilerplugin>3.7.0</v.mavencompilerplugin>
+    <v.junit>4.12</v.junit>
   </properties>
   <build>
     <plugins>
@@ -32,7 +33,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.12</version>
+      <version>${v.junit}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>

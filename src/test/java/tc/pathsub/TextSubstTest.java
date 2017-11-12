@@ -2,7 +2,8 @@ package tc.pathsub;
 
 import org.junit.Test;
 
-import java.util.LinkedHashMap;
+import java.util.HashMap;
+import java.util.Map;
 
 public class TextSubstTest {
     private final String[] LINES = {
@@ -18,7 +19,7 @@ public class TextSubstTest {
 
     @Test
     public void testTransform() {
-        LinkedHashMap<String, String> xfm = new LinkedHashMap<>();
+        Map<String, String> xfm = new HashMap<>();
         xfm.put("dolor", "SADNESS");
         xfm.put("id est laborum.", "ad infinitum!");
         xfm.put("Lorem ipsum", "Via dolorosa... ");
